@@ -4,11 +4,12 @@ import { StyleSheet, Text, View } from "react-native";
 
 //create a component that returns some jsx
 export default function CustomComponent() {
+  const name = "Priyanshu Tiwari";
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>
-        Hello World! This is my custom component.😊
-      </Text>
+      <Text style={styles.textStyle1}>Welcome to Priyanshu's Channel.</Text>
+      <Text style={styles.textStyle2}>I love React Native.</Text>
+      <Text style={styles.textStyle3}>My name is {name}</Text>
     </View>
   );
 }
@@ -21,7 +22,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  textStyle: {
+  textStyle1: {
+    color: "blue",
+    fontSize: 20,
+  },
+  textStyle2: {
     color: "red",
+    fontSize: 20,
+  },
+  textStyle3: {
+    color: "green",
+    fontSize: 20,
   },
 });
