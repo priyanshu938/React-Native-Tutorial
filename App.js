@@ -12,8 +12,9 @@ export default function App() {
     <View style={styles.container}>
       {/* <CustomComponent />
       <FlatListDemo /> */}
-      {/* <Images /> */}
-      <Buttons />
+      <Images />
+      {/* <Buttons />
+       */}
     </View>
   );
 }
