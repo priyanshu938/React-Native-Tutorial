@@ -1,6 +1,7 @@
 //import libraries to create components
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import Buttons from "./src/screens/Buttons";
 import CustomComponent from "./src/screens/CustomComponent";
 import FlatListDemo from "./src/screens/FlatListDemo";
 import Images from "./src/screens/Images";
@@ -11,7 +12,8 @@ export default function App() {
     <View style={styles.container}>
       {/* <CustomComponent />
       <FlatListDemo /> */}
-      <Images />
+      {/* <Images /> */}
+      <Buttons />
     </View>
   );
 }
