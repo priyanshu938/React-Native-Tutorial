@@ -1,7 +1,43 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, Button, Linking } from "react-native";
+//for fonts go to directory.vercel.app ,search, import in yor code,useFont, app loading then font-family.
+import {
+  JosefinSans_100Thin,
+  JosefinSans_200ExtraLight,
+  JosefinSans_300Light,
+  JosefinSans_400Regular,
+  JosefinSans_500Medium,
+  JosefinSans_600SemiBold,
+  JosefinSans_700Bold,
+  JosefinSans_100Thin_Italic,
+  JosefinSans_200ExtraLight_Italic,
+  JosefinSans_300Light_Italic,
+  JosefinSans_400Regular_Italic,
+  JosefinSans_500Medium_Italic,
+  JosefinSans_600SemiBold_Italic,
+  JosefinSans_700Bold_Italic,
+} from "@expo-google-fonts/josefin-sans";
+import { useFonts } from "expo-font";
+import AppLoading from "expo-app-loading";
 
 const NetflixCard = ({ imageSource, text, description }) => {
+  let [fontsLoad] = useFonts({
+    JosefinSans_100Thin,
+    JosefinSans_200ExtraLight,
+    JosefinSans_300Light,
+    JosefinSans_400Regular,
+    JosefinSans_500Medium,
+    JosefinSans_600SemiBold,
+    JosefinSans_700Bold,
+    JosefinSans_100Thin_Italic,
+    JosefinSans_200ExtraLight_Italic,
+    JosefinSans_300Light_Italic,
+    JosefinSans_400Regular_Italic,
+    JosefinSans_500Medium_Italic,
+    JosefinSans_600SemiBold_Italic,
+    JosefinSans_700Bold_Italic,
+  });
+  if (!fontsLoad) return <AppLoading />;
   return (
     <View style={styles.listStyle}>
       <Image
@@ -33,18 +69,19 @@ const styles = StyleSheet.create({
   },
 
   imageStyle: {
-    //for full image 
+    //for full image
     width: "100%",
     height: undefined,
     aspectRatio: 1,
   },
   textStyle: {
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: "JosefinSans_700Bold_Italic",
   },
   descStyle: {
     fontSize: 18,
     marginVertical: 10,
+    fontFamily: "JosefinSans_100Thin",
   },
 });
 export default NetflixCard;
