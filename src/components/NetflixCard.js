@@ -75,13 +75,23 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
   },
   textStyle: {
+    marginTop: 10,
     fontSize: 25,
     fontFamily: "JosefinSans_700Bold_Italic",
+    fontVariant: ["small-caps"],
+    letterSpacing: 5,
+    lineHeight: 25,
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10,
+    textShadowColor: "rgba(0, 0, 0, 0.75)",
+    textTransform: "uppercase",
   },
   descStyle: {
-    fontSize: 18,
-    marginVertical: 10,
+    textAlign: "justify",
+    margin: 8,
+    fontSize: 15,
     fontFamily: "JosefinSans_100Thin",
+    letterSpacing: 3,
   },
 });
 export default NetflixCard;
