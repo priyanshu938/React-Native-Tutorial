@@ -30,7 +30,7 @@ const Buttons = () => {
       >
         <Image
           style={styles.imageStyle}
-          source={require("../../assets/1.jpg")}
+          source={require("../../assets/google.png")}
         />
 
         <Text>Press me</Text>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 
-const CardDetail = ({text,imageSource}) => {
+const CardDetail = ({ text, imageSource }) => {
   return (
     <View style={styles.listStyle}>
       <Text style={styles.textStyle}>{text}</Text>
