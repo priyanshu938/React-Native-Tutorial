@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginHorizontal: 5,
     backgroundColor: "green",
+    borderColor:"grey",
   },
   allBox: {
     borderWidth: 2,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   box1: {
-    backgroundColor: "red",
+    backgroundColor: "blue",
   },
   box2: {
     backgroundColor: "purple",
