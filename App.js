@@ -10,6 +10,7 @@ import NetflixScrollingCards from "./src/components/NetflixScrollingCards";
 import MultipleStylesInOneSingleComponent from "./src/components/MultipleStylesInOneSingleComponent";
 import Flexbox from "./src/components/Flexbox";
 import Positions from "./src/components/Positions";
+import CounterNumber from "./src/components/CounterNumber";
 //create a component that returns some jsx
 export default function App() {
   const netflix = [
@@ -55,7 +56,8 @@ export default function App() {
       {/* <MultipleStylesInOneSingleComponent /> */}
       {/* <NetflixScrollingCards netflix={netflix} /> */}
       {/* <Flexbox /> */}
-      <Positions />
+      {/* <Positions /> */}
+      <CounterNumber />
     </View>
   );
 }
