@@ -22,7 +22,7 @@ const CounterNumber = () => {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          setNumber(number - 10);
+         number!==0 && setNumber(number - 10);
         }}
       >
         <Text style={styles.common}>-10</Text>
