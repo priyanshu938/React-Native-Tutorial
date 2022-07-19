@@ -4,6 +4,8 @@ import { StyleSheet, View, Text, FlatList } from "react-native";
 import Buttons from "./src/screens/Buttons";
 import CustomComponent from "./src/screens/CustomComponent";
 import FlatListDemo from "./src/screens/FlatListDemo";
+import HookEffect from "./src/screens/HookEffect";
+
 import Images from "./src/screens/Images";
 import NetflixCard from "./src/components/NetflixCard";
 import NetflixScrollingCards from "./src/components/NetflixScrollingCards";
@@ -57,7 +59,8 @@ export default function App() {
       {/* <NetflixScrollingCards netflix={netflix} /> */}
       {/* <Flexbox /> */}
       {/* <Positions /> */}
-      <CounterNumber />
+      {/* <CounterNumber /> */}
+      <HookEffect />
     </View>
   );
 }
