@@ -13,6 +13,7 @@ import MultipleStylesInOneSingleComponent from "./src/components/MultipleStylesI
 import Flexbox from "./src/components/Flexbox";
 import Positions from "./src/components/Positions";
 import CounterNumber from "./src/components/CounterNumber";
+import ContactUs from "./src/components/ContactUs";
 //create a component that returns some jsx
 export default function App() {
   const netflix = [
@@ -60,7 +61,8 @@ export default function App() {
       {/* <Flexbox /> */}
       {/* <Positions /> */}
       {/* <CounterNumber /> */}
-      <HookEffect />
+      {/* <HookEffect /> */}
+      <ContactUs/>
     </View>
   );
 }
@@ -69,7 +71,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    alignItems: "center",
+    marginHorizontal:4,
+    // alignItems: "center",
     justifyContent: "center",
   },
   textStyle: {
