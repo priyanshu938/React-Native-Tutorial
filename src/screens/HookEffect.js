@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  ActivityIndicator,
+} from "react-native";
+import StudentsCard from "./StudentsCard";
 
 const HookEffect = () => {
   const [data, setData] = useState();
@@ -21,20 +28,20 @@ const HookEffect = () => {
     getUserData();
   }, []);
 
-  return (
+  return isLoaded ? (
+    <View style={styles.loader}>
+      {/* loader */}
+      <ActivityIndicator size="large" color="#0000ff" />
+    </View>
+  ) : (
     <View style={styles.container}>
+      <Text style={styles.header}>List Of Students</Text>
       <FlatList
         style={styles.listStyle}
         keyExtractor={(key) => key.id}
         data={data}
         renderItem={({ item }) => {
-          return (
-            <View>
-              <Text>{item.name}</Text>
-              <Text>{item.email}</Text>
-              <Text>{item.mobile}</Text>
-            </View>
-          );
+          return <StudentsCard item={item} />;
         }}
       />
     </View>
@@ -42,10 +49,24 @@ const HookEffect = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
-  textStyle: {
-    fontSize: 100,
-    margin: 100,
+  loader: {
+    minHeight: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "pink",
+    width: "100%",
+    height: "100%",
+  },
+  container: {
+    backgroundColor: "pink",
+    width: "100%",
+    height: "100%",
+    paddingVertical: 100,
+  },
+  header: {
+    fontSize: 40,
+    textAlign: "center",
   },
 });
 export default HookEffect;
