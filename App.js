@@ -5,7 +5,6 @@ import Buttons from "./src/screens/Buttons";
 import CustomComponent from "./src/screens/CustomComponent";
 import FlatListDemo from "./src/screens/FlatListDemo";
 import HookEffect from "./src/screens/HookEffect";
-
 import Images from "./src/screens/Images";
 import NetflixCard from "./src/components/NetflixCard";
 import NetflixScrollingCards from "./src/components/NetflixScrollingCards";
@@ -13,9 +12,14 @@ import MultipleStylesInOneSingleComponent from "./src/components/MultipleStylesI
 import Flexbox from "./src/components/Flexbox";
 import Positions from "./src/components/Positions";
 import CounterNumber from "./src/components/CounterNumber";
-import ContactUs from "./src/components/ContactUs";
+import ContactUs from "./src/components/ReactNavigation/ContactUs";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./src/components/ReactNavigation/Home";
+
 //create a component that returns some jsx
 export default function App() {
+  const Stack = createNativeStackNavigator();
   const netflix = [
     {
       index: 1,
@@ -51,7 +55,12 @@ export default function App() {
     },
   ];
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={ContactUs} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+      {/* <View style={styles.container}> */}
       {/* <CustomComponent />
       <FlatListDemo /> */}
       {/* <Images /> */}
@@ -62,8 +71,9 @@ export default function App() {
       {/* <Positions /> */}
       {/* <CounterNumber /> */}
       {/* <HookEffect /> */}
-      <ContactUs/>
-    </View>
+      {/* <ContactUs/> */}
+      {/* </View> */}
+    </NavigationContainer>
   );
 }
 
@@ -71,7 +81,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    marginHorizontal:4,
+    marginHorizontal: 4,
     // alignItems: "center",
     justifyContent: "center",
   },

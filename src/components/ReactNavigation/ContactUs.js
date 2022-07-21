@@ -9,14 +9,15 @@ import {
 import React, { useState } from "react";
 import Checkbox from "expo-checkbox";
 
-const ContactUs = () => {
+const ContactUs = ({ navigation }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [agree, setAgree] = useState(false);
   const submit = () => {
-    if ((name === "abc") & (password === "abc"))
+    if ((name.length > 0) & (password.length > 3)) {
       Alert.alert(`Thank you ${name}`);
-    else Alert.alert("Username and password are incorrect!");
+      navigation.navigate("Home", { name: `${name}` }); // to navigate through screens using Stack navigation and you can also pass some optional props in that component using key-value syntax
+    } else Alert.alert("Username and password are incorrect!");
   };
   return (
     <View style={styles.mainContainer}>
@@ -76,7 +77,7 @@ export default ContactUs;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: 100,
+    marginTop: 20,
     marginHorizontal: 2,
   },
   header: {
